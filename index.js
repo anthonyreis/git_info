@@ -10,14 +10,14 @@ getReposByUser('anthonyreis').then((allRepos) => {
     console.log(e)
 })
 
-// Get all Pull Request from a given repositorie
+// Get all Pull Requests from a given repository
 getPR('anthonyreis', 'CometaNews', 'all').then((numPRs) => {
     console.log('Número de Pull Requests: ', numPRs)
 }).catch((e) => {
     console.log(e)
 })
 
-// Get all commits from a given repositorie
+// Get all commits from a given repository
 getAllCommits('anthonyreis', 'CometaNews', 1, 0).then((response) => {
     console.log('Número de Commits: ', response)
 }).catch((e) => {
