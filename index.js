@@ -1,10 +1,14 @@
 const getPR = require('./utills/getPullRequests')
 const getAllCommits = require('./utills/getCommits')
-const getRepos = require('./utills/getRepos')
 const getReposByUser = require('./utills/getReposByUser')
+const getRepos = require('./utills/getRepos')
 
 // Get all repositories names
-getReposByUser('anthonyreis')
+getReposByUser('anthonyreis').then((allRepos) => {
+    console.log(allRepos)
+}).catch((e) => {
+    console.log(e)
+})
 
 // Get all Pull Request from a given repositorie
 getPR('anthonyreis', 'CometaNews', 'all').then((numPRs) => {

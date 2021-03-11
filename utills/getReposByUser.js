@@ -3,8 +3,7 @@ const octokit = new Octokit()
 
 const getReposByUser = async (username) => {
     const response = await octokit.request('GET /users/{username}/repos', {
-        username,
-        sort: 'full_name'
+        username
       })
 
     allRepos = response.data.map((item) => {
